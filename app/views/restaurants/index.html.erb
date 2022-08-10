@@ -1,0 +1,15 @@
+<p style="color: light blue"><%= notice %></p>
+
+<h1>These are the restaurants!</h1>
+<p type="button" class="btn btn-outline-primary"><%= link_to 'Create new restaurant', new_restaurant_path %></p>
+
+<div id="restaurants">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <%= render restaurant %>
+      <p type="button" class="btn btn-outline-primary">
+        <%= link_to "Show this restaurant", restaurant %>
+      </p>
+    <% end %>
+  </ul>
+</div>
